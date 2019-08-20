@@ -1,5 +1,5 @@
 # editorjs-json-to-html
-Get HTML from EditorJS JSON 
+Get HTML from EditorJS JSON (IE compatible)
 
 Support :
   - Header
