@@ -1,11 +1,11 @@
 function f_convert_json_to_html(json) {
-    var articleHTML = '';
-    articleHTML += `<div class="codex-editor">\n`;
-    articleHTML += `<div class="codex-editor__redactor">\n`;
+    var output_HTML = '';
+    output_HTML += `<div class="codex-editor">\n`;
+    output_HTML += `<div class="codex-editor__redactor">\n`;
     json.blocks.map(obj => {
         switch (obj.type) {
             case 'delimiter':
-                articleHTML += `<div class="ce-block">
+                output_HTML += `<div class="ce-block">
                     <div class="ce-block__content">
                         <div class="ce-delimiter cdx-block"></div>
                     </div>
@@ -24,7 +24,7 @@ function f_convert_json_to_html(json) {
                         <div class="cdx-checklist__item-text">${item.text}</div>
                     </div>`;
                 });
-                articleHTML += `<div class="ce-block">
+                output_HTML += `<div class="ce-block">
                     <div class="ce-block__content">
                     <div class="cdx-block cdx-checklist">
                         ${checklist}
@@ -34,7 +34,7 @@ function f_convert_json_to_html(json) {
                 break;
 
             case 'header':
-                articleHTML += `<div class="ce-block">
+                output_HTML += `<div class="ce-block">
                     <div class="ce-block__content">
                         <h${obj.data.level} class="ce-header">${obj.data.text}</h${obj.data.level}>
                     </div>
@@ -42,7 +42,7 @@ function f_convert_json_to_html(json) {
                 break;
 
             case 'paragraph':
-                articleHTML += `<div class="ce-block">
+                output_HTML += `<div class="ce-block">
                     <div class="ce-block__content">
                         <div class="ce-paragraph cdx-block">
                             ${obj.data.text}
@@ -66,7 +66,7 @@ function f_convert_json_to_html(json) {
                         ${cells}
                     </tr>\n`
                 });
-                articleHTML += `<div class="ce-block">
+                output_HTML += `<div class="ce-block">
                     <div class="ce-block__content">
                         <div class="tc-editor cdx-block">
                             <div class="tc-table__wrap">
@@ -85,6 +85,6 @@ function f_convert_json_to_html(json) {
                 return '';
         }
     });
-    articleHTML += `</div>\n</div>\n`;
-    return articleHTML;
+    output_HTML += `</div>\n</div>\n`;
+    return output_HTML;
 }
