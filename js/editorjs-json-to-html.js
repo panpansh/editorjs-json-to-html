@@ -1,4 +1,4 @@
-function f_convert_json_to_html(json) {
+function f_editorjs_convert_json_to_html(json) {
     var output_HTML = '';
     output_HTML += `<div class="codex-editor">\n`;
     output_HTML += `<div class="codex-editor__redactor">\n`;
