@@ -1,3 +1,19 @@
 @import './checklist.css';
 @import './delimiter.css';
 @import './table.css';
+
+.ce-block__content {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.ce-paragraph {
+    line-height: 1.6em;
+    outline: none;
+}
+.cdx-block {
+    padding: .7em 0;
+}
+.tc-editor {
+    left: 0;
+}
