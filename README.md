@@ -15,3 +15,5 @@ var editorjs_innerHTML_data = f_editorjs_convert_json_to_html(json_data);
 ```
 
 https://github.com/codex-team/editor.js/issues/676
+
+You are welcome to make changes.
